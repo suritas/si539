@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 20px;
+  font-family: Raleway;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 60px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN HTML (Center website) -->
+<div class="main">
+
+<!-- NAVIGATION-->
+<nav>
+  <ul class="nav">
+    <a class="current" href="welcome.html">WELCOME</a>
+    <a href="process.html">PROCESS</a> |
+    <a href="design.html">DESIGN</a> |
+    <a href="about.html">ABOUT</a>
+  </ul>
+</nav>
+
+<h1>SURITA:UX</h1>
+<hr>
+
+<h2>Hello! Welcome to my Portfolio</h2>
+<br><br>
+<p>Here are some of my recent projects</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="images/nbc-logo.png" alt="NBC" style="width:100%">
+      <h3>NBC Project</h3>
+      <p>Evaluation of smart NBCSkill Application for Alexa Home devices.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="images/cnbc-logo.png" alt="CNBC" style="width:100%">
+      <h3>CNBC Project</h3>
+      <p>Interaction mapping of CNBC iOS App.</p>
+    </div>
+  </div>
+
+<!-- END GRID -->
+<!-- END MAIN -->
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+  <p>Contact me:</p>
+  <p><a href="mailto:suspigner@gmail.com">suspigner@gmail.com</a>.</p>
+</footer>
+
+</body>
+</html>

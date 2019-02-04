@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 20px;
+  font-family: Raleway;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 40px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN HTML (Center website) -->
+<div class="main">
+
+<!-- NAVIGATION-->
+<nav>
+  <ul class="nav">
+    <a href="welcome.html">WELCOME</a>
+    <a href="process.html">PROCESS</a> |
+    <a class="current" href= "design.html">DESIGN</a> |
+    <a href="about.html">ABOUT</a>
+  </ul>
+</nav>
+
+
+<h1>Design</h1>
+<hr>
+
+<h2>Logos</h2>
+
+<!-- Designs Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="images/justfutures_logotype.jpg" alt="Just Futures Logo" style="width:100%">
+      <h3>Just Futures Logomark</h3>
+      <p>Logomark created for the Just Futures research collaborative.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+<!-- END MAIN -->
+</div>
+<!-- add space before the footer -->
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<footer>
+  <p>Contact me:</p>
+  <p><a href="mailto:suspigner@gmail.com">suspigner@gmail.com</a>.</p>
+</footer>
+
+</body>
+</html>
