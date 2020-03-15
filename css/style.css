@@ -1,0 +1,636 @@
+/* -----GLOBAL VARS----- */
+:root {
+--ballstopx: calc(100vw - 80vw);
+/* main colors */
+--color1: #99CC33;
+--color2: #F9A764;
+--color3: #4f4e4e;
+--transparentcolor2: #F9A7647F;
+/* fonts */
+--font1: 'Open Sans', sans-serif;
+--font2: 'Raleway', sans-serif;
+}
+/*Citation for root: use: https://www.w3schools.com/css/css3_variables.asp */
+
+/* SKIP TO CONTENT */
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  /* slides down from above */
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  /*to keep the "skip to content" button above page */
+  position: absolute;
+  top: -100px;
+}
+/* Focus has border, and begins as Skip to Content in the upper left */
+.skip a:focus {
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+}
+
+/* BODY */
+body{
+font-family: var(--font1);
+margin: 30px;
+padding: 10px;
+font-weight: 300;
+font-style: normal;
+line-height: 1.2em;
+font-size: 2em;
+text-decoration: none;
+letter-spacing: .06em;
+}
+
+/*Keyframes for ball bounce animation*/
+@-webkit-keyframes bounce {
+  0% {-webkit-transform: translateY(-100px);}
+  10%, 30%, 50%, 100% {-webkit-transform: translateY(0);}
+  20% {-webkit-transform: translateY(-20px);}
+  40% {-webkit-transform: translateY(-5px);}
+  60% {-webkit-transform: translateY(-2px);}
+}
+@keyframes bounce {
+ 0% {-webkit-transform: translateY(-100px);}
+ 10%, 30%, 50%, 100% {-webkit-transform: translateY(0);}
+ 20% {-webkit-transform: translateY(-20px);}
+ 40% {-webkit-transform: translateY(-5px);}
+ 60% {-webkit-transform: translateY(-2px);}
+}
+/* Citation Bounce:https://www.tutorialspoint.com/css/css_animation_bounce.htm */
+#logo{
+ height: 100px;
+ padding-top: 50px;
+ position: relative;
+ /* first make a NAME for the animation above */
+ -webkit-animation-name: bounce;
+ animation-name: bounce;
+ /* DURATION */
+ -webkit-animation-duration: 2s;
+ animation-duration: 2s;
+ /* # of times/SO IT DOESNT REPEAT */
+ -webkit-animation-iteration-count: 1;
+ animation-iteration-count: 1;
+ /* Stays in final position */
+ -webkit-animation-fill-mode: forwards;
+ animation-fill-mode: forwards;
+}
+#suritaux{
+position: absolute;
+font-size: 50px;
+padding-bottom: 30px;
+}
+#gallery{
+text-align: center;
+font-size: 25px;
+padding-top: 50px;
+}
+header{
+border-bottom: 3px solid var(--color1);
+display:flex;
+flex-direction: column;
+align-items:center;
+}
+nav a{
+font-size:11px;
+color: black;
+text-decoration: none;
+padding: 9px;
+}
+nav a:hover{
+color:white;
+background-color: black;
+border: 2px solid black;
+padding: 5px;
+transition: 1s ease-in;
+}
+.process a:hover{
+color: var(--color1);
+}
+.design a:hover{
+color: var(--color2);
+}
+nav ul{
+display:flex;
+flex-direction: column;  /*DIRECTION MOBILE ONLY */
+padding-bottom: 10px;
+}
+nav li{
+padding: 1px;
+text-align: center;
+}
+.current {
+font-weight: bold;
+border: 2px solid grey;
+padding: 5px;
+}
+.gallery{
+/* height: 100px; */
+display:flex;
+align-items:center;
+flex-wrap: wrap;
+justify-content: center;
+margin:50px;
+}
+.gallery > a{
+border: 10px grey solid;
+margin: 10px;
+width: 100px;
+height:100px;
+}
+.gallery a:hover:nth-child(even){
+border: 10px var(--color1) solid;
+}
+.gallery a:hover:nth-child(odd){
+border: 10px var(--color2) solid;
+}
+
+footer{
+background-color: black;
+font-size: 10px;
+line-height: normal;
+padding:5px;
+color: white;
+text-align: center;
+}
+.desktopfooter, .tabletfooter{
+  display: none;
+}
+.mobilefooter{
+  display: block;
+}
+/* --------------------------------WELCOME ONLY--------------------------------------- */
+#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9 {
+background-image: url(../images/ball3.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+#image1:hover{
+background-image: url(../images/cnbc-logo.png);
+}
+#image2:hover{
+background-image: url(../images/nbc-logo.png);
+}
+#image3:hover{
+background-image: url(../images/amazon-logo.png);
+}
+#image4:hover{
+background-image: url(../images/sas-logo.png);
+}
+#image5:hover{
+background-image: url(../images/justfutures_logotype.jpg);
+}
+#image6:hover{
+background-image: url(../images/comingsoon.jpg);
+}
+#image7:hover{
+background-image: url(../images/comingsoon.jpg);
+}
+#image8:hover{
+background-image: url(../images/comingsoon.jpg);
+}
+#image9:hover{
+background-image: url(../images/comingsoon.jpg);
+}
+/* --------------------------------PROCESS ONLY--------------------------------------- */
+// Text Effect
+* {
+  margin: 0;
+  padding: 0;
+}
+/* PROJECT TITLE */
+.projecttitle {
+  font-size: 5vw;
+  font-weight:bold;
+  line-height: 1;
+  position: relative;
+  font-family: var(--font2);
+  /* display: inline-block; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom:5px;
+  text-align: center;      /* MOBILEONLY */
+  /* Color fallback */
+  color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(../images/cnbcbackground.JPG);
+  background-attachment: fixed; /* Parallax effect */
+  background-position: right;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+}
+/* Change the background position to display letter when the black zone isn't here */
+.projecttitle--no-textzone:before {
+  background-position: -.75em 0;
+}
+.projecttitle--no-textzone:after {
+  content: none;
+}
+/* Use Background-size cover for photo background and no-repeat background */
+.projecttitle--cover,
+.projecttitle--cover:before {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+background-position: 50% 50%;
+}
+/* CITATION: Background image text effect https://codepen.io/Jintos/pen/crlxk */
+
+/* TOP IMAGE & CAPTION*/
+#cnbcphone{
+  width: 35vw;
+  /* mobile only */
+}
+.top-flexcontainer{
+display:flex;
+flex-direction: column;
+align-items:center;
+flex-wrap: wrap;
+justify-content: center;
+margin:50px;
+padding: 20px;
+}
+.top-description{
+color: black; /* make contrast */
+background-color: white; /* make contrast */
+font-family: var(--font2);
+font-size: 16px;
+padding-top:10px;
+padding-bottom:20px;
+}
+
+/* STEPS */
+.container{
+display: grid;
+grid-column: 1fr;
+grid-row-gap: 10px;
+padding-top:25px;
+padding-bottom:15px;
+}
+.stepcontent{
+  padding:20px;
+  /*vertically centers rows to step */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.stepcontent p {
+  padding:30px;
+  font-size: 14pt;
+}
+/* bold top of bullet list */
+.stepcontent ul p{
+  padding:0px;
+  padding-top:2vh;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+/* combo of bullet and bold top part */
+.stepcontent ul{
+  padding-left: 80px;
+  line-height: normal;
+  font-size: .7em;
+  color:var(--color3);
+}
+/* bullet part */
+.stepcontent li{
+  padding-top: 1.5vw;
+  padding-bottom:0vw;
+  padding-right: 5vw;
+}
+.stepcontentborder{
+  background-color: white;
+  border: 5px solid var(--transparentcolor2);
+  -webkit-background-clip: padding-box; /* Safari */
+  background-clip: padding-box; /* IE9+, Firefox 4+, Opera, Chrome /* Citation:transparent border webkit:https://stackoverflow.com/questions/4062001/can-you-set-a-border-opacity-in-css */
+}
+.steptitle{
+/* grid-column: 2 / span 2; */
+color:var(--color1);
+/* height: 100%; */
+font-size:3vh;
+background-color: white;
+font-weight: bold;
+padding:30px
+text-transform: uppercase;
+}
+.step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8{
+  font-size:10vh;
+  font-weight: bold;
+  font-family: var(--font2);
+  text-align: center;
+  color:var(--color1);
+  z-index:-1;
+  line-height: normal;
+}
+
+/* IMAGES IN STEPCONTENT */
+/* container in case want to add more image */
+.flex-container-images{
+  background-color: white;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin:30px;
+
+  /* align-content: flex-start; */
+  /* margin padding */
+}
+.flex-item {
+  /*width: 350px;
+  height: null;*/
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100px;
+  justify-content: center;
+  text-align: center;
+  margin:5px
+}
+
+/* FLIPCARDS */
+.figstate{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1vw;
+}
+.flip-card {
+background-color: transparent;
+height: 40vw;
+}
+#livetv{
+height:40vw;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,4);
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+}
+.flip-card-back {
+transform: rotateY(180deg);
+-webkit-animation-name: rotateY(180deg);
+color: var(--color1)
+}
+.flip-card-front {
+color: var(--color2)
+}
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+position: absolute;
+background-color: transparent;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+/* Flipcard Citation:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+
+#chenpersona, #cookpersona, #diynapersona{
+  height: 400px;
+}
+#cnbcaffinity{
+  height: 800px;
+}
+
+/* --------------------------------DESIGN ONLY--------------------------------------- */
+/* --------------------------------ABOUT ONLY--------------------------------------- */
+#profile{
+width:300px;
+height:300px;
+background-color: white;
+}
+/* CONTACT FORM */
+.form-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-row-gap: 5px;
+  padding:25px;
+  padding-bottom:15px; */
+  padding:30px;
+  padding-right: 45px;
+  border-radius: 2px;   /* curved border */
+  background-color: lightgrey;
+  margin: 30px 1vw 30px 1vw;   /*order: top right bottom left */
+  align-items: start;
+}
+/* .form-row{
+  grid-column: 1/-1;
+} */
+.form-row-title{
+  font-size: 14px;
+  grid-column: 1/span 1;
+  align-items: start;
+}
+.form-input{
+  grid-column: 1/span 1;
+}
+
+/* INPUT FIELDS */
+textarea, input[type=text], input[type=email]{
+    border-radius: 3px;   /* curved border */
+    border: 1px solid var(--color3);
+    width: 91.5%;
+}
+/* hover */
+textarea:hover, input[type=text]:hover, input[type=email]:hover{
+    border: 1px solid var(--color1);
+}
+/* onclick & while typing */
+textarea:focus, input[type=text]:focus, input[type=email]:focus{
+    border: 2px solid var(--color1);
+    outline: none;  /* no blue border around input */
+}
+input[type=text], input[type=email]{
+  padding: 10px;
+}
+textarea {
+  height: 200px;
+  padding: 10px;
+  resize: vertical;
+}
+
+/* SUBMIT BUTTON */
+.submit-button{
+  grid-column: 1/-1;
+  text-align: center;
+}
+input[type=submit]{
+  background-color: var(--color1);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  /* margin: 70vw; */
+  width:100%;
+  /* mwidth: 100%; */
+  cursor: pointer;
+}
+input[type=submit]:hover{
+  background-color: var(--color2);
+}
+input[type=submit]:active{
+  background-color: black;
+}
+/*###################################################################################################################TABLET##############################################################################################################*/
+@media all and (min-width: 800px){
+  /* FORM */
+.form-container{
+    grid-template-columns: 20% 60% 20%;
+}
+.form-input{
+    grid-column: 2/span 2;
+}
+/* SUBMIT BUTTON */
+.submit-button{
+  grid-column: 3/span 1;
+}
+/* INPUT FIELDS */
+textarea, input[type=text], input[type=email]{
+    margin-top: 5px;
+}
+textarea {
+  width: 100%;
+  margin-top: 7px;
+}
+input[type=text], input[type=email]{
+  width: 200px;
+}
+/* NAV*/
+nav{
+padding: 0px;
+display:block;
+margin-right:10px;
+}
+nav ul{
+flex-direction: row;
+}
+nav a{
+font-size:10px;
+}
+
+/* FOOTER */
+.tabletfooter{
+  display: block;
+}
+.mobilefooter{
+  display: none;
+}
+/*###################################################################################################################DESKTOP##############################################################################################################*/
+@media all and (min-width: 1000px){
+.top-flexcontainer{
+  flex-direction: row;
+}
+/* NAV */
+header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+/* justify-content: flex-start; */
+/* justify-content: right; */
+}
+nav{
+/* text-align: right; */
+padding: 10px 0px;
+display:inline-block;
+margin-right:10px;
+}
+nav ul{
+flex-direction: row;
+}
+nav a{
+font-size:1vw;
+}
+/* STEPS*/
+.container{
+grid-template-columns: 10% 90%;
+}
+.stepcontent{
+  grid-column: 2 /span 2;
+}
+.steptitle{
+  grid-column: 2 / span 2;
+}
+.stepcontentborder{
+  border: 30px solid var(--transparentcolor2);
+}
+.step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8{
+  font-size:50vh;
+  text-align: right;
+}
+.flex-item {
+  padding-left: 20px;
+}
+.form-container{
+  margin: 50px 20vw 50px 20vw;
+}
+
+/* BALL ANIMATION */
+@-webkit-keyframes roll {
+from {transform:rotate(0deg); left:-999px; top:30px;}
+to {transform:rotate(1500deg); left:var(--ballstopx); top:30px;}
+}
+@keyframes roll {
+  from {transform:rotate(0deg); left:-999px; top:30px;}
+  to {transform:rotate(1500deg); left:var(--ballstopx); top:30px;}
+}
+#logo{
+height: 100px;
+position: relative;
+padding-top: 0px;
+/* first make a NAME for the animation above */
+-webkit-animation-name: roll;
+animation-name: roll;
+/* duration*/
+-webkit-animation-duration: 3s;
+animation-duration: 3s;
+/* # of times/SO IT DOESNT REPEAT */
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+/* Stays in final position */
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+}
+
+/* GALLERY */
+.gallery > a{
+width: 300px;
+height: 300px;
+}
+
+/* FOOTER */
+.desktopfooter{
+  display: block;
+}
+.tabletfooter, .mobilefooter{
+  display:none;
+}
+
+input[type=text], input[type=email]{
+  width: 200px;
+  padding: 10px;
+}
+}/* closing desktop bracket */
+
+/* REDUCE MOTION */
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+}
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+}

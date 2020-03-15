@@ -1,56 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="css/styles.css">
+<html lang="en">
+<!--HEAD: NAME OF PAGE AND REFERENCE TO CSS STYLESHEET-->
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160395307-1"></script>
+				<script>
+				  window.dataLayer = window.dataLayer || [];
+				  function gtag(){dataLayer.push(arguments);}
+				  gtag('js', new Date());
+				  gtag('config', 'UA-160395307-1');
+				</script>
+		<!-- Other Head content -->
+		<meta charset="UTF-8">
+		<title>About</title>
+		<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet">
+	</head>
+	<!--BODY & NAV-------------------------------------------->
+	<body>
+		<header>
+			<div class="skip">
+				<a href="#main">Skip to Main Content</a>
+			</div>
+			<img src="images/ball3.png" alt="logo" id = "logo">
+			<h1 id = "suritaux">SURITA : UX</h1>
+			<nav id = "nav">
+				<ul>
+					<li class="index"><a href = index.html> Welcome </a></li>
+					<li class="process"><a  href = process.html> Process </a></li>
+					<li class="design"><a href = design.html> Design </a></li>
+					<li class="about"><a class="current" href = about.html> About </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main">
 
-
-</head>
-<body>
-
-<!-- MAIN HTML (Center website) -->
-<div class="main">
-
-<!-- NAVIGATION-->
-<nav>
-  <ul class="nav">
-    <a href="welcome.html">WELCOME</a>
-    <a href="process.html">PROCESS</a>
-    <a href="design.html">DESIGN</a>
-    <a class="current" href="about.html">ABOUT</a>
-  </ul>
-</nav>
-
-
-<h1>Hi, I’m Surita</h1>
-<h2> Thank you for visiting my portfolio</h2>
-<br><br>
-
-<!-- dont know how to add this image
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="images/umsiwhite_logo.jpg" alt="UMSI logo" style="width:100%">
-    </div>
-  </div>
- </div>
-<!--END GRID -->
-<br>
-<h3>A little about me:</h3>
-      <p>I am currently a Master’s Candidate at the University of Michigan’s School of Information, in the Human Computer Interaction/User Experience Program. I will be doing my thesis on the application of UX for entertainment and fintech interfaces.</p>
-<br>
-<h3> My approach</h3>
-<p>Beyond design.
-<br>My background in scientific research and manual creation allows me to devise simple, yet effective solutions. I use information architecture, technical writing, background research, survey, and psychology to inform ideation and communicate with others. </p>
-<!-- END MAIN -->
-<!-- add space before the footer -->
-
-
-<br><br><br><br><br><br><br><br><br><br><br>
-
-<footer>
-  <p>Contact me:</p>
-  <p><a href="mailto:suspigner@gmail.com">suspigner@gmail.com</a>.</p>
-</footer>
-
-</body>
+			<!-- <img src="images/ball3.png" alt="surita profile picture" id = "profile"> -->
+			<!-- contact form -->
+			<div class="form-container"
+				<form action="https://formspree.io/xayoando" method="POST">
+					<!-- <div class="form-row">	<! so that title and input field are in same row -->
+						<div class="form-row-title">
+							<label for="form-name">Name</label>
+						</div>
+						<div class="form-input">
+							<input type="text" name="Name" placeholder="Full Name">
+						</div>
+					<!-- </div> -->
+					<!-- <div class="form-row"> -->
+						<div class="form-row-title">
+							<label for="form-name">Email</label>
+						</div>
+						<div class="form-input">
+							<input type="email" name="_replyto" placeholder="Your email...">
+						</div>
+					<!-- </div> -->
+					<!-- <div class="form-row"> -->
+						<div class="form-row-title">
+							<label for="form-name">Subject</label>
+						</div>
+						<div class="form-input">
+							<input type="text" name="subject" placeholder="Subject...">
+						</div>
+					<!-- </div> -->
+					<!-- <div class="form-row"> -->
+						<div class="form-row-title">
+							<label for="form-name">Message</label>
+						</div>
+						<div class="form-input">
+							<textarea name="message" placeholder="Your message here.."></textarea>
+						</div>
+					<!-- </div> -->
+					<div class="submit-button">
+						<input type="submit" value="Send">
+					</div>
+				  <!-- Name <input type="text" name="Name"><br>
+				  Message <input type="text" name="message"><br>
+				  Email <input type="email" name="_replyto"><br> -->
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p>Surita Spigner Portfolio 2020</p>
+			<div class="mobilefooter">Display: Mobile</div>
+			<div class="tabletfooter">Display: Tablet</div>
+			<div class="desktopfooter">Display: Desktop</div>
+		</footer>
+	</body>
 </html>

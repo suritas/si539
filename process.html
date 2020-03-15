@@ -1,61 +1,236 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+<html lang="en">
+<!--HEAD: NAME OF PAGE AND REFERENCE TO CSS STYLESHEET-->
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160395307-1"></script>
+				<script>
+				  window.dataLayer = window.dataLayer || [];
+				  function gtag(){dataLayer.push(arguments);}
+				  gtag('js', new Date());
+				  gtag('config', 'UA-160395307-1');
+				</script>
+		<!-- Other Head content -->
+		<meta charset="UTF-8">
+		<title>Process</title>
+		<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet">
+	</head>
+	<!--BODY & NAV-------------------------------------------->
+	<body>
+		<header>
+			<div class="skip">
+				<a href="#main">Skip to Main Content</a>
+			</div>
+			<img src="images/ball3.png" alt="logo" id = "logo">
+			<h1 id = "suritaux">SURITA : UX</h1>
+			<nav id = "nav">
+				<ul>
+					<li class="index"><a href = index.html> Welcome </a></li>
+					<li class="process"><a class="current" href = process.html> Process </a></li>
+					<li class="design"><a href = design.html> Design </a></li>
+					<li class="about"><a href = about.html> About </a></li>
+				</ul>
+			</nav>
+		</header>
+<!--MAIN: PAGE CONTENTS------------------------------------------>
+		<main id="main">
+<!-- <p id="main" tabindex="-1"> -->
 
-<!-- MAIN HTML (Center website) -->
-<div class="main">
+			<!-- <img src="images/cnbc-logo.png" alt="cnbc logo" id = "toplogo"> -->
+			<div class-"top-flexcontainer">
+				<div class="projecttitle">CNBC iOS Redesign</div>
+				<img id = "cnbcphone" src="images/cnbcphone.png" alt="hand holding phone with cnbc app"/>
+			</div>
+<!-- Text Effect Citation: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html -->
+			<div class="top-description">
+				<p> The following is from a Student Consultant project with CNBC, through the University of Michigan. <br>Redesign of the CNBC iOS app for mobile devices included interaction maps, surveys (writing, administration, qualitative NVivo analysis), interviews, comparative & heuristic evaluation, and visual prototypes. Focused on mobile gesture usability and architecture of ‘Markets’ and Live ‘CNBC TV’.</p>
+			</div>
+			<div class="container">
+				<div class="step1"> 1 </div>
+					<div class = "stepcontent stepcontentborder">
+						<div class = "steptitle">BACKGROUND RESEARCH</div>
+						<p>Initial scoping session with Emerging Platforms Team Reps.<br>
+						Identified Research Question:	How can user behaviors surrounding existing finance and video applications influence architecture and gesture expectations for the iOs redesign of the CNBC app?
+						<br>
+						Scope: Markets & Live TV<br>
+						Identified competing applications for competitive analyis: <br>
+						Identified current user:(35+ passive investor)<br>
+						Identified new/target user: (20+ aspirational viewer, young professional)<br>
+						</p>
+					</div>
+					<!-- CITATION: How to add captions to flex images:https://stackoverflow.com/questions/28949683/get-image-and-caption-into-one-flex-item -->
+							<!-- <img id="chenpersona" src="images/chenpersona.png" alt="Persona of Chen user for the CNBC app"/>
+							<figcaption
+							<img src="images/livetv_cnbcredesign_before.png" alt="cnbc live tv screen before" id = "livetv"/> -->
 
-<!-- NAVIGATION-->
-<nav>
-  <ul class="nav">
-    <a href="welcome.html">WELCOME</a>
-    <a class="current" href="process.html">PROCESS</a>
-    <a href="design.html">DESIGN</a>
-    <a href="about.html">ABOUT</a>
-  </ul>
-</nav>
+				<div class="step2"> 2 </div>
+					<div class = "stepcontent stepcontentborder">
+						<div class = "steptitle">HYPOTHESIS</div>
+							<p>Exclusive content for Markets, and familiar gestures for Video will encourage user retention.</p>
+					</div>
+				<div class="step3"> 3 </div>
+					<div class = "stepcontent stepcontentborder">
+						<div class = "steptitle">INVESTIGATION PLAN</div>
+							<p>Interaction Map (familiarize pain points)<br>
+							User Interviews (video app & cable TV use)<br>
+							Competitive Analysis (compare competing apps)<br>
+							Survey & Analysis (contextualize interview results against online survey of 81 millenials)<br>
+							Usability Study/Task Observation (identify attempted gestures)<br>
+							</p>
+					</div>
+					<div class="step4"> 4 </div>
+						<div class = "stepcontent stepcontentborder">
+							<div class = "steptitle">COMPARATIVE ANALYIS</div>
+								<p>
+								Research into industry competitors via finance media, as well as preliminary interviews illuminated the following mobile competitors:
+								<ul>
+									<li>Direct: Bloomberg</li>
+									<li>Indirect: Wall Street Journal (website)</li>
+									<li>Partial: Marketwatch, IG TV, ABC, YouTube Live, Yahoo Finance</li>
+									<li>Parallel: Robinhood</li>
+									<li>Analogous: Netflix</li>
+								</ul>
+								<br>
+								<p>
+								"Matrix 1: Criteria for Competitor Categories" justified how each competitor was categorized as direct, indirect, etc. with criteria for each category.
+								<br>
+								"Matrix 2:Binary Matrix of all Competitive Products" compared utility (gestures) & display features.
+								<br>
+								"Matrix 3: Direct Comparison between CNBC & Bloomberg mobile applications"compared more of the unique utility (gestures) & display features of the direct competitor (Bloomberg).
+								<br>
+								</p>
+								<p>Analysis Findings:</p>
+								<ul>
+									<li>Color-coded, overlay comparison of stock charts is useful for comparing correlation</li>
+									<li>The majority of Video-related indirect competitors offered </li>
+									<li>Exclusive Content is popular amongst competitors</li>
+									<li>Video and stock recommendations can help the casual user get started</li>
+									<li>An overview page gives users a better understanding of the indexes & categories covered</li>
+									<li>New Live content notifications is not common, but can help engage users </li>
+									<li>Supporting multitasking while watching live TV/Videos</li>
+									<li>People like to play videos/live content in the background</li>
+									<li>Intuitive gestures that empower users</li>
+									<li>Gestures are more habitual for users than buttons or UI elements. </li>
+								</ul>
+								<br>
+									<p>Recommendations:</p>
+									<ul>
+									<li>Add Color-coded Overlay Stock Chart comparison option</li>
+									<li>Notify & Display bookmarks</li>
+									<li>Continue producing exclusive content to the app</li>
+									<li>Customized video and stock recommendations based on activity</li>
+									<li>Having an overview page listing the most important indexes of each category </li>
+									<li>New Live content recommended based on user’s subscription or watching history</li>
+									<li>Supporting multitasking while watching live TV/Videos</li>
+									<li>Offer gesture option for video: center tap for pause/play & and edge double tap for fast-forward & rewind</li>
+									</ul>
+								</p>
+						</div>
+						<div class="step5"> 5 </div>
+							<div class = "stepcontent stepcontentborder">
+								<div class = "steptitle">USER INTERVIEW</div>
+									<p>Interviewee Screener:</p>
+									<ul>
+									  <li>Student-professional, or professional (infers finance management paracticality)</li>
+									  <li>Mobile video-streaming Viewer</li>
+									  <li>Some markets or finance management interest</li>
+										<li>18-22</li>
+									</ul>
+									<br>
+									<p>Upload transcript into NVivo for qualitative analyis of reoccuring feedback & pain points</p>
+									<br>
+									<p>Interview Findings:</p>
+									<ul>
+										<li>Our target audience prefers watching videos on mobile over watching desktop.</li>
+										<li>Interviewees were unable to recall useful features because they did not consider them to be “features” since the gesture were so intuitive. </li>
+										<li>Video platforms providing frequently updated content are more competitive than platforms that do not.</li>
+										Recommendations:
+										<li>Produce exclusive content for CNBC mobile app and market to current cable TV CNBC watchers. </li>
+										<li>Constantly update personalized user recommendations to increase viewership.</li>
+										<li>Allow users to interact with each other on the mobile app through actions such as commenting and liking each others’ comments.</li>
+										<li>Provide intuitive gestures and flatten interactions to minimize goal achieving time such as: Tap screen to pause or play, Drag and minimize, Double tap on the right for fast forward, Double tap on the left fo rewind,Time elapsed bar, Time stamp, Continue watching where users left off, Video preview without sound.
+										</li>
+									</ul>
+								</p>
+							</div>
+							<div class="step6"> 6 </div>
+								<div class = "stepcontent stepcontentborder">
+									<div class = "steptitle">PERSONAS</div>
+										<p>
+											Create personas that reflect the most prominent user archetypes, their currently used apps, and their pain points
+											<!-- <img id="chenpersona" src="images/chenpersona.png" alt="Persona of Chen user for the CNBC app" />
+											<img id="cookpersona" src="images/cookpersona.png" alt="Persona of Cook user for the CNBC app" />
+											<img id="diynapersona" src="images/diynapersona.png" alt="Persona of Diyna user for the CNBC app" /> -->
+										</p>
+								</div>
+								<div class="step7"> 7 </div>
+									<div class = "stepcontent stepcontentborder">
+										<div class = "steptitle">ANALYSIS & COMMUNICATION</div>
+											<p>Interpretation Sessions allowed us to synthesize common findings between interviews<br>
+											A digital Affinity Diagram was created<br>
+											<!-- <img id="cnbcaffinity" src="images/cnbc-affinity.jpg" alt="Affinity Diagram for the CNBC app"/> --></p>
+									</div>
+									<div class="step8"> 8 </div>
+										<div class = "stepcontent stepcontentborder">
+											<div class = "steptitle">HYPOTHESIS</div>
+												<p>
+													Using the findings from the above analyes we redesigned a few key aspects of the application and conducted a preference test to see if users prefered the current version or our redesign
+												</p>
+													<ul>
+														<p>15 seconds icon </p>
+														<li>Regarding the addition of the 15 second UI element, most respondents noted that they preferred this to the original option. One respondent noted that they rarely use the skip button, while another noted that they prefer a double tap option when skipping as opposed to an icon UI element. </li>
+														<p>CC podcast icon</p>
+														<li>	The new podcast option was the most popular amongst respondents. One person even mentioned that even though they do not have a hearing impairment, they will use closed captions to understand thick accents. One aspect of confusion was the color of the icons, and whether the yellow meant activated, and grey meant inactivated. Thus, we would suggest a uniform color activated & deactivated color for both icons. </li>
+														<p>Yellow bar</p>
+														<li>When shown the demonstration of the original screen, the respondents unanimously thought that the yellow bar was intended to indicate progress through the video. Therefore, they preferred the yellow bar to be absent as we demonstrated in the new version, so as not to cause confusion. </li>
+														<div class="flex-container-images">
+																<div class="flex-item">
+																			<div class="flip-card">
+																				<div class="flip-card-inner">
+																					<div class="flip-card-front">
+																						<img src="images/livetv_cnbcredesign_before.png" alt="cnbc live tv screen before" id = "livetv">
+																						<div class="figstate">Original</div>
+																					</div>
+																					<div class="flip-card-back">
+																						<img src="images/livetv_cnbcredesign_after.png" alt="cnbc live tv screen after" id = "livetv" >
+																						<div class="figstate">Redesign</div>
+																					</div>
+																				</div>
 
+																			</div>
+																</div>
+														</div>
+														<p>Live TV title</p>
+														<li>	The new format and title of the page was preferred to the original version. However, some respondents also mentioned that the high density of slides was a little overwhelming and they were confused why there were so many slides.	</li>
+														<div class="flex-container-images">
+																<div class="flex-item">
+																			<div class="flip-card">
+																				<div class="flip-card-inner">
+																					<div class="flip-card-front">
+																						<img src="images/livetv_cnbcredesign_before.png" alt="cnbc live tv screen before" id = "livetv">
+																						<div class="figstate">Original</div>
+																					</div>
+																					<div class="flip-card-back">
+																						<img src="images/livetv_cnbcredesign_after.png" alt="cnbc live tv screen after" id = "livetv" >
+																						<div class="figstate">Redesign</div>
+																					</div>
+																				</div>
 
-<h1>Process</h1>
-<h2> Research Steps</h2>
-<p>1. BACKGROUND RESEARCH
-<br>
-<br>2. HYPOTHESIS
-<br>
-<br>3. INVESTIGATION PLAN
-<br>
-<br>4. USER INTERVIEW & OBSERVATION
-<br>
-<br>5. PERSONA CREATION
-<br>
-<br>6. ANALYSIS & COMMUNICATION
-<br>
-<br>7. INNOVATIVE SOLUTIONS
-<br>
-<br>8. IMPLEMENTATION & FOLLOW THROUGH</p>
-
-<!-- Designs Gallery Grid -->
-<!-- <div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="justfutures_logotype.jpg" alt="Just Futures Logo" style="width:100%">
-      <h3>Just Futures Logomark</h3>
-      <p>Logomark created for the Just Futures research collaborative.</p>
-    </div>
-  </div>
-END GRID -->
-<!-- END MAIN -->
-</div>
-<!-- add space before the footer -->
-<br><br><br><br><br><br><br><br><br><br><br>
-
-<footer>
-  <p>Contact me:</p>
-  <p><a href="mailto:suspigner@gmail.com">suspigner@gmail.com</a>.</p>
-</footer>
-
-</body>
+																			</div>
+																</div>
+														</div>
+													</ul>
+												</p>
+										</div>
+									</div> <!-- containercloser -->
+		</main>
+		<footer>
+			<p>Surita Spigner Portfolio 2020</p>
+			<div class="mobilefooter">Display: Mobile</div>
+			<div class="tabletfooter">Display: Tablet</div>
+			<div class="desktopfooter">Display: Desktop</div>
+		</footer>
+	</body>
 </html>
